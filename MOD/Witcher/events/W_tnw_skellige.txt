@@ -1,0 +1,830 @@
+#Bran death event
+narrative_event = {
+    id = tnw.400
+    desc = EVTDESCtnw.400
+    title = EVTNAMEtnw.400
+    picture = GFX_evt_viking_funeral_oldgods
+    
+    hide_from = yes
+    is_triggered_only = yes
+	
+	trigger = {
+		#independent = yes
+		is_ruler = yes
+		culture  = skellige
+        start_date = 1275.1.1
+    }
+  
+    immediate = {
+        random = {
+            chance = 20
+            set_character_flag = hjalmar_will_fail
+        }
+        random = {
+            chance = 75
+            set_character_flag = lugos_visit_cave
+        }
+    }
+    
+    option = { #An Crait
+        name = EVTOPTAtnw.400
+        trigger = {
+			dynasty = 7001 
+		}
+        show_portrait = c_35201
+        show_portrait = c_35208
+        hidden_tooltip = {
+
+            c_35201 = {
+                any_playable_ruler = {
+                    limit = {
+                        is_landed = yes
+                        culture = skellige
+                    }
+                    if = {
+                        limit = {ROOT = {has_character_flag =  hjalmar_will_fail}}
+                        long_character_event = { id = tnw.408 days = 45}
+                    }
+                    else = {
+                        long_character_event = { id = tnw.407 days = 45}
+                    }
+                }
+                ROOT = {
+                     if = {
+                        limit = {ROOT = {has_character_flag =  hjalmar_will_fail}}
+                        long_character_event = { id = tnw.408 days = 45}
+                    }
+                    else = {
+                        long_character_event = { id = tnw.407 days = 45}
+                    }
+                }
+            }
+
+            c_1 = { #wtf im doing???
+                holder_scope = {
+                    character_event = {id = tnw.420 days = 150}
+                }
+            }
+        }
+    }
+
+    option = { #Tuirseach
+        name = EVTOPTBtnw.400
+        trigger = {
+			dynasty = 7000 
+		}
+        show_portrait = ROOT
+    }
+
+    option = { #Brokvar
+        name = EVTOPTCtnw.400
+        trigger = {
+			dynasty = 7002 
+		}
+        tooltip_info = hym_possessed
+        long_character_event = { id = tnw.401 days = 14}
+    }
+
+    option = { #Heymaey
+        name = EVTOPTDtnw.400
+        trigger = {
+			dynasty = 7003 
+		}
+        show_portrait = 35635
+    }
+
+    option = { #Dimun
+        name = EVTOPTEtnw.400
+        trigger = {
+			dynasty = 7005 
+		}
+        show_portrait = 36039
+    }
+
+    option = { #Drummond
+        name = EVTOPTFtnw.400
+        trigger = {
+			dynasty = 7004 
+		}
+        show_portrait = 35849
+        hidden_tooltip = {
+            c_35849 = {
+                any_playable_ruler = {
+                    limit = {
+                        is_landed = yes
+                        culture = skellige
+                    }
+                    if = {
+                        limit = {ROOT = {has_character_flag = lugos_visit_cave}}
+                        long_character_event = { id = tnw.409 days = 80}
+                    }
+                }
+                ROOT = {
+                        if = {
+                        limit = {ROOT = {has_character_flag =  lugos_visit_cave}}
+                        long_character_event = { id = tnw.409 days = 80}
+                    }
+                }
+            }
+        }
+    }  
+
+    after = {
+        clr_character_flag = hjalmar_will_fail
+        clr_character_flag = lugos_visit_cave
+    }
+}        
+
+#Cerys arrive
+long_character_event = {
+    id = tnw.401
+    desc = EVTDESCtnw.401
+    title = EVTNAMEtnw.401
+    picture = GFX_evt_woman_at_window_hf
+    
+    #hide_from = yes
+    is_triggered_only = yes
+
+    trigger = {
+		c_35208 = {is_alive = true}
+	}
+	
+    option = {
+        name = EVTOPTAtnw.401
+        long_character_event = { id = tnw.402 days = 21}
+        c_35208 = {
+            move_character = ROOT
+            hidden_tooltip = {
+                add_trait = cannot_marry
+            }
+        }
+    }
+}
+
+#Cerys take sword
+long_character_event = {
+    id = tnw.402
+    desc = EVTDESCtnw.402
+    title = EVTNAMEtnw.402
+    picture = GFX_evt_viking_throneroom_oldgods
+    
+    is_triggered_only = yes
+
+    trigger = {
+		c_35208 = {is_alive = true}
+	}
+	
+    option = {
+        name = EVTOPTAtnw.402
+        destroy_artifact = brokvar
+        long_character_event = { id = tnw.403 days = 14}
+        ai_chance = { factor = 90 }
+    }
+
+    option = {
+        name = EVTOPTBtnw.402
+        c_35208 = {
+            move_character = father
+            hidden_tooltip = {
+                remove_trait = cannot_marry
+            }  
+        }
+        ai_chance = { factor = 10 }
+    }
+}
+
+#Outcome
+long_character_event = {
+    id = tnw.403
+    desc = EVTDESCtnw.403
+    title = EVTNAMEtnw.403
+    picture = GFX_evt_lunatic
+    
+    trigger = {
+		c_35208 = {is_alive = true}
+	}
+
+    is_triggered_only = yes
+
+    immediate = {
+        random = {
+            chance = 20
+            set_character_flag = cerys_will_fail
+        }
+    }
+	
+    option = {
+        name = EVTOPTAtnw.403
+        add_trait = one_eyed
+        tooltip_info = hym_possessed
+        if = {
+            limit = {has_character_flag =  cerys_will_fail}
+            long_character_event = { id = tnw.405 days = 14}
+        }
+        else = {
+            long_character_event = { id = tnw.404 days = 14}
+        }
+        
+    }
+
+    after = {
+        clr_character_flag = cerys_will_fail
+    }
+}
+
+#Recover
+long_character_event = {
+    id = tnw.404
+    desc = EVTDESCtnw.404
+    title = EVTNAMEtnw.404
+    picture = GFX_evt_recovery
+    
+    is_triggered_only = yes
+
+    trigger = {
+		c_35208 = {is_alive = true}
+	}
+
+    option = {
+        name = EVTOPTAtnw.404
+        remove_trait = hym_possessed
+        opinion = {
+            who = 35208
+            modifier = opinion_very_grateful
+            years = 10
+        }
+         c_35208 = {
+            move_character = father
+            prestige = 100
+            hidden_tooltip = {
+                remove_trait = cannot_marry
+                any_playable_ruler = {
+                    limit = {
+                        is_landed = yes
+                        culture = skellige
+                        NOT = {character = ROOT}
+                    }
+                    narrative_event = { id = tnw.406 }
+                }
+            }          
+        }
+        set_global_flag=tnw_cerys_hym 
+    }
+}
+
+#Cerys death or return to crach
+long_character_event = {
+    id = tnw.405
+    desc = EVTDESCtnw.405
+    title = EVTNAMEtnw.405
+    picture = GFX_evt_burning_house
+    
+    is_triggered_only = yes
+
+    trigger = {
+		c_35208 = {is_alive = true}
+	}
+
+    option = {
+        name = EVTOPTAtnw.405
+         c_35208 = {
+            move_character = father
+            prestige = -100
+            hidden_tooltip = {
+                remove_trait = cannot_marry
+            }          
+        }
+        ai_chance = { factor = 90 }
+    }
+
+	option = { 
+		name = EVTOPTBtnw.405
+		c_35208 = {
+			death = {
+				death_reason = death_execution
+				killer = ROOT
+			}
+            father = {
+               add_rival = ROOT 
+            }
+		}
+		ai_chance = { factor = 10 }
+	}
+}
+
+#Udarlyk healed
+long_character_event = {
+    id = tnw.406
+    desc = EVTDESCtnw.406
+    title = EVTNAMEtnw.406
+    picture = GFX_evt_recovery
+    
+    is_triggered_only = yes
+
+    option = {
+        name = EVTOPTAtnw.406
+    }
+}
+
+#Hjalmar kill gigant
+long_character_event = {
+    id = tnw.407
+    desc = EVTDESCtnw.407
+    title = EVTNAMEtnw.407
+    picture = GFX_evt_mountaintop_castle_hf
+    
+    is_triggered_only = yes
+    hide_from = true
+
+    immediate = {
+        148 = { #Undvik
+            remove_province_modifier = giants
+        }
+    }
+
+    option = {
+        name = EVTOPTAtnw.407
+        set_global_flag = tnw_hjalmar_undvik
+    }
+}
+
+
+#Hjalmar death
+long_character_event = {
+    id = tnw.408
+    desc = EVTDESCtnw.408
+    title = EVTNAMEtnw.408
+    picture = GFX_evt_mountaintop_castle_hf
+    is_triggered_only = yes
+    hide_from = true
+
+    immediate = {
+        c_35201 = {
+            death = {
+				death_reason = death_monsters
+			}
+        }
+    }
+
+    option = {
+        name = EVTOPTAtnw.408
+        trigger = {
+			NOT = { dynasty = 7001 }
+		}
+    }
+
+    option = {
+        name = EVTOPTBtnw.408
+        trigger = {
+			dynasty = 7001 
+		}
+    }
+}
+
+#Lugos cave
+long_character_event = {
+    id = tnw.409
+    desc = EVTDESCtnw.409
+    title = EVTNAMEtnw.409
+    picture = GFX_evt_runestone_raising_oldgods
+    is_triggered_only = yes
+    hide_from = true
+
+    trigger = {
+        c_35849 = {
+            is_alive = yes
+        }
+    }
+    immediate = {
+        set_global_flag = tnw_lugos_cave
+    }
+
+    option = {
+        name = EVTOPTAtnw.409
+        c_35849 = {
+            if = {
+                limit = { trait = craven }
+                remove_trait = craven
+            }
+            add_trait = brave
+
+        }
+    }
+}
+
+
+character_event = {
+	id = tnw.420
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		start_date = 1275.1.1
+	}
+	
+	option = { # Hjalmar
+        any_playable_ruler = {
+			limit = {
+                dynasty = c_35201
+                is_landed = yes
+                culture = skellige
+			}
+			narrative_event = { id = tnw.421 } # można odpalic ten event z opoznieniem o 1 dzien dla AI
+		}
+
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 has_global_flag=tnw_hjalmar_undvik}
+			modifier = {
+				factor = 0
+				c_35201 = {
+					is_alive = no
+				}
+			}
+		}
+	}
+
+    option = { # Cerys
+        any_playable_ruler = {
+			limit = {
+                is_landed = yes
+                culture = skellige
+                dynasty = c_35208
+			}
+			narrative_event = { id = tnw.422 }
+		}
+
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 has_global_flag=tnw_cerys_hym}
+			modifier = {
+				factor = 0
+				c_35208 = {
+					is_alive = no
+				}
+			}
+		}
+	}
+
+    option = { # Lugos
+        any_playable_ruler = {
+			limit = {
+                is_landed = yes
+                culture = skellige
+                dynasty = c_35849
+			}
+			narrative_event = { id = tnw.423 }
+		}
+
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 has_global_flag=tnw_lugos_cave}
+			modifier = {
+				factor = 0
+				c_35849 = {
+					is_alive = no
+				}
+			}
+		}
+	}
+
+    option = { # Otrygg
+        any_playable_ruler = {
+			limit = {
+                is_landed = yes
+                culture = skellige
+                dynasty = c_35635
+			}
+			narrative_event = { id = tnw.424 }
+		}
+
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				c_35635 = {
+					is_alive = no
+				}
+			}
+		}
+	}
+
+    option = { # Halbjorn
+        any_playable_ruler = {
+			limit = {
+                is_landed = yes
+                culture = skellige
+                dynasty = c_36039
+			}
+			narrative_event = { id = tnw.425 }
+		}
+
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				c_36039 = {
+					is_alive = no
+				}
+			}
+		}
+	}
+
+    option = { # Svanrige
+        c_35017 = {
+			narrative_event = { id = tnw.426 }
+		}
+
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				c_35017 = {
+					is_alive = no
+				}
+			}
+		}
+	}
+
+    #####     po wszystkim wyszyscic flagi
+    after = {
+        clr_global_flag = tnw_cerys_hym
+        clr_global_flag = tnw_hjalmar_undvik
+        clr_global_flag = tnw_lugos_cave
+        hidden_tooltip = {
+            k_skellig = {
+                add_law = {
+                    law = succ_skellige
+                    cooldown = no
+                    opinion_effect = no
+                }
+            }
+        }
+    }
+}
+
+#Hjalmar king
+narrative_event = {
+    id = tnw.421
+    desc = EVTDESCtnw.421
+    title = EVTNAMEtnw.421
+    picture = GFX_evt_vikings_arriving_oldgods
+
+    is_triggered_only = yes
+    hide_from = yes
+
+    option = {
+        name = EVTOPTAtnw.421
+        hidden_tooltip = {
+            if = {
+                limit = {
+                    dynasty = c_35201
+                }
+                abdicate_to = 35201
+                transfer_scaled_wealth = {
+                    from = ROOT
+                    to = 35201
+                    value = all
+                }
+                
+                c_35201 = {
+                    gain_title = k_skellig
+                }
+                any_playable_ruler = {
+                    limit = {
+                        is_landed = yes
+                        culture = skellige
+                        NOT = {dynasty = c_35201}
+                    }
+                    narrative_event = { id = tnw.421 }
+                }
+                move_character = 35201
+            }
+            else = {
+                set_defacto_liege = k_skellig
+            }
+        }
+    }
+}
+
+
+#Cerys queen
+narrative_event = {
+    id = tnw.422
+    desc = EVTDESCtnw.422
+    title = EVTNAMEtnw.422
+    picture = GFX_evt_norse_tempest
+
+    is_triggered_only = yes
+    hide_from = yes
+
+    option = {
+        name = EVTOPTAtnw.422
+        hidden_tooltip = {
+            if = {
+                limit = {
+                    dynasty = c_35208
+                }
+                abdicate_to = 35208
+                transfer_scaled_wealth = {
+                    from = ROOT
+                    to = 35208
+                    value = all
+                }
+
+                move_character = 35208
+                c_35208 = {
+                    gain_title = k_skellig
+                }
+                any_playable_ruler = {
+                    limit = {
+                        is_landed = yes
+                        culture = skellige
+                        NOT = {dynasty = c_35208}
+                    }
+                    narrative_event = { id = tnw.422 }
+                }
+            }
+            else = {
+                set_defacto_liege = k_skellig
+            }
+        }
+    }
+}
+
+#Lugos king
+narrative_event = {
+    id = tnw.423
+    desc = EVTDESCtnw.423
+    title = EVTNAMEtnw.423
+    picture = GFX_evt_vikings_arriving_oldgods
+
+    is_triggered_only = yes
+    hide_from = yes
+
+    option = {
+        name = EVTOPTAtnw.423
+        hidden_tooltip = {
+            if = {
+                limit = {
+                    dynasty = c_35849
+                }
+                abdicate_to = 35849
+                transfer_scaled_wealth = {
+                    from = ROOT
+                    to = 35849
+                    value = all
+                }
+
+                move_character = 35849
+                c_35849 = {
+                    gain_title = k_skellig
+                }
+                any_playable_ruler = {
+                    limit = {
+                        is_landed = yes
+                        culture = skellige
+                        NOT = {dynasty = c_35849}
+                    }
+                    narrative_event = { id = tnw.423 }
+                }
+            }
+            else = {
+                set_defacto_liege = k_skellig
+            }
+        }
+    }
+}
+
+#Otrygg king
+narrative_event = {
+    id = tnw.424
+    desc = EVTDESCtnw.424
+    title = EVTNAMEtnw.424
+    picture = GFX_evt_vikings_arriving_oldgods
+
+    is_triggered_only = yes
+    hide_from = yes
+
+    option = {
+        name = EVTOPTAtnw.424
+        hidden_tooltip = {
+            if = {
+                limit = {
+                    dynasty = c_35635
+                }
+                abdicate_to = 35635
+                transfer_scaled_wealth = {
+                    from = ROOT
+                    to = 35635
+                    value = all
+                }
+
+                move_character = 35635
+                c_35635 = {
+                    gain_title = k_skellig
+                }
+                any_playable_ruler = {
+                    limit = {
+                        is_landed = yes
+                        culture = skellige
+                        NOT = {dynasty = c_35635}
+                    }
+                    narrative_event = { id = tnw.424 }
+                }
+            }
+            else = {
+                set_defacto_liege = k_skellig
+            }
+        }
+    }
+}
+
+#Halbjorn king
+narrative_event = {
+    id = tnw.425
+    desc = EVTDESCtnw.425
+    title = EVTNAMEtnw.425
+    picture = GFX_evt_vikings_arriving_oldgods
+
+    is_triggered_only = yes
+    hide_from = yes
+
+    option = {
+        name = EVTOPTAtnw.425
+        hidden_tooltip = {
+            if = {
+                limit = {
+                    dynasty = c_36039
+                }
+                abdicate_to = 36039
+                transfer_scaled_wealth = {
+                    from = ROOT
+                    to = 36039
+                    value = all
+                }
+
+                move_character = 36039
+                c_36039 = {
+                    gain_title = k_skellig
+                }
+                any_playable_ruler = {
+                    limit = {
+                        is_landed = yes
+                        culture = skellige
+                        NOT = {dynasty = c_36039}
+                    }
+                    narrative_event = { id = tnw.425 }
+                }
+            }
+            else = {
+                set_defacto_liege = k_skellig
+            }
+        }
+    }
+}
+
+#Svanrige king
+narrative_event = {
+    id = tnw.426
+    desc = EVTDESCtnw.426
+    title = EVTNAMEtnw.426
+    picture = GFX_evt_vikings_arriving_oldgods
+
+    is_triggered_only = yes
+    hide_from = yes
+
+    option = {
+        name = EVTOPTAtnw.426
+        hidden_tooltip = {
+            if = {
+                limit = {
+                    dynasty = c_35017
+                }
+                c_35017 = {
+                    gain_title = k_skellig
+                }
+                any_playable_ruler = {
+                    limit = {
+                        is_landed = yes
+                        culture = skellige
+                        NOT = {dynasty = c_35017}
+                    }
+                    narrative_event = { id = tnw.426 }
+                }
+            }
+            else = {
+                set_defacto_liege = k_skellig
+            }
+        }
+    }
+}
+
+
+#svanrige kaze matce sie nie mieszac
+#masakra kandydatów, giną losowo
+#ktos odkrył ze to Birma
+
+#dodanie claima na cintre jeśli ciri nie zostanie cesarzową
+#kolonizacja Undvik

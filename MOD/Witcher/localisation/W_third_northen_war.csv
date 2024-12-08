@@ -65,6 +65,78 @@ EVTDESCtnw.305;The last time you saw her she was furious with you. But now she h
 EVTOPTAtnw.305;Welcome home daughter.;;;;;;;;;;;;;x;
 EVTOPTBtnw.305;Abdicate, and leave the ruling to your daughter.;;;;;;;;;;;;;x;
 
+EVTNAMEtnw.400;The King is Dead;;;;;;;;;;;;;x;
+EVTDESCtnw.400;King Bran, former King of the Skellige Isles, lived a long and storied life. When he finally felt decrepitude taking a hold of him, he went into the woods to hunt a bear armed with only a knife – and thus ended his reign. In keeping with our tradition, the time has come to elect a new king to lead us in these difficult times.;;;;;;;;;;;;;x;
+EVTOPTAtnw.400;Hjalmar and Cerys will represent our Clan.;;;;;;;;;;;;;x;
+EVTOPTBtnw.400;I should be the one to continue my father's legacy.;;;;;;;;;;;;;x;
+EVTOPTCtnw.400;The gods have a different purpose for me.;;;;;;;;;;;;;x;
+EVTOPTDtnw.400;Otrygg will represent our Clan..;;;;;;;;;;;;;x;
+EVTOPTEtnw.400;Halbjorn will represent our Clan.;;;;;;;;;;;;;x;
+EVTOPTFtnw.400;I hope Lugos will not let me down.;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.401;Visitor;;;;;;;;;;;;;x;
+EVTDESCtnw.401;Cerys, the daughter of Crach has arrived on your island. She questioned you about the voices of the gods that you hear, and now she questions all the inhabitants of the island about you. Why does she have such curiosity?;;;;;;;;;;;;;x;
+EVTOPTAtnw.401;Interesting;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.402;Brokvar;;;;;;;;;;;;;x;
+EVTDESCtnw.402;Somehow Cerys found out about your story with your brother. She claims that the gods are speaking to you because they want you to reconcile with your brother. To this end, your ancestral sword must be given to Aki.;;;;;;;;;;;;;x;
+EVTOPTAtnw.402;Perhaps this is the will of the gods?;;;;;;;;;;;;;x;
+EVTOPTBtnw.402;Throw the sword into the sea? Thank you for such great ideas.;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.403;God's will;;;;;;;;;;;;;x;
+EVTDESCtnw.403;"You vile wretch. You didn't help Aki, and now you failed to sail out to beg his forgiveness. Poke out your eye. Suffer, and regret the evil you've wrought.";;;;;;;;;;;;;x;
+EVTOPTAtnw.403;May the gods forgive me.;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.404;Hym;;;;;;;;;;;;;x;
+EVTDESCtnw.404;Cerys kidnapped your son and had him thrown into the oven.... It seemed like the worst day of your life, but the moment your child was thrown into the oven, a "shadow" appeared in the room looking like a person. As it later turned out, it was a demon - Hym. When he left your body, Cerys appeared with your son, whole and healthy. The demon felt cheated and left your body once and for all.;;;;;;;;;;;;;x;
+EVTOPTAtnw.404;I feel... empty;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.405;Kidnapper;;;;;;;;;;;;;x;
+EVTDESCtnw.405;Cerys an Craite was caught in an attempt to kidnap your son. She claims you were possessed and she needed your son to help you. An absurd explanation, she should be executed for this, but this will be met with an answer from her father.;;;;;;;;;;;;;x;
+EVTOPTAtnw.405;Get off my island!;;;;;;;;;;;;;x;
+EVTOPTBtnw.405;You will pay for it!;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.406;Udarlyk possesed;;;;;;;;;;;;;x;
+EVTDESCtnw.406;For years, everyone on the islands believed that Udarlyk heard voices from the gods, claiming himself to be their chosen one. As it turned out, it was not the voices of the gods that he heard, but a demon that possessed him when he was young. With the help of Cerys an Crait the demon was driven away and Udarlyk regained his mind.;;;;;;;;;;;;;x;
+EVTOPTAtnw.406;Interesting.;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.407;Hjalmar the giantslayer;;;;;;;;;;;;;x;
+EVTDESCtnw.407;Some time ago, Hjalmar an Crait gathered a drakkar of warriors and set off for Undvik to liberate the island from the rule of the ice giant. Today, news has reached us that Hjalmar has returned from his expedition, although almost all his companions were killed, but the giant was finally killed and Undvik liberated.;;;;;;;;;;;;;x;
+EVTOPTAtnw.407;Finally some good news!;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.408;The Lord of Undvik;;;;;;;;;;;;;x;
+EVTDESCtnw.408;Some time ago, Hjalmar an Crait gathered a drakkar of warriors and set out for Undvik to liberate the island from the ice giant. Today, news has reached us that Hjalmar and his companions were killed during this expedition.;;;;;;;;;;;;;x;
+EVTOPTAtnw.408;Bad news.;;;;;;;;;;;;;x;
+EVTOPTBtnw.408;This is terrible news for the Crait...;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.409;Cave of Dreams;;;;;;;;;;;;;x;
+EVTDESCtnw.409;It is said that whoever enters the Cave of Dreams will find there what they fear most. We have received news that young Lugos and his crew also went there and survived.;;;;;;;;;;;;;x;
+EVTOPTAtnw.409;Interesting.;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.421;King Hjalmar;;;;;;;;;;;;;x;
+EVTDESCtnw.421;Weren't long ago we gave King Bran back to the sea. Today our mourning ends. Today, by the grace of the gods and the clans, a new ruler takes the crown. Let us swear him fealty.;;;;;;;;;;;;;x;
+EVTOPTAtnw.421;Long live the King!;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.422;Queen Cerys;;;;;;;;;;;;;x;
+EVTDESCtnw.422;Weren't long ago we gave King Bran back to the sea. Today our mourning ends. Today, by the grace of the gods and the clans, a new ruler takes the crown. Let us swear her fealty.;;;;;;;;;;;;;x;
+EVTOPTAtnw.422;Long live the Queen!;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.423;King Lugos;;;;;;;;;;;;;x;
+EVTDESCtnw.423;Weren't long ago we gave King Bran back to the sea. Today our mourning ends. Today, by the grace of the gods and the clans, a new ruler takes the crown. Let us swear him fealty.;;;;;;;;;;;;;x;
+EVTOPTAtnw.423;Long live the King!;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.424;King Otrygg;;;;;;;;;;;;;x;
+EVTDESCtnw.424;Weren't long ago we gave King Bran back to the sea. Today our mourning ends. Today, by the grace of the gods and the clans, a new ruler takes the crown. Let us swear him fealty.;;;;;;;;;;;;;x;
+EVTOPTAtnw.424;Long live the King!;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.425;King Halbjorn;;;;;;;;;;;;;x;
+EVTDESCtnw.425;Weren't long ago we gave King Bran back to the sea. Today our mourning ends. Today, by the grace of the gods and the clans, a new ruler takes the crown. Let us swear him fealty.;;;;;;;;;;;;;x;
+EVTOPTAtnw.425;Long live the King!;;;;;;;;;;;;;x;
+
+EVTNAMEtnw.426;King Svanrige;;;;;;;;;;;;;x;
+EVTDESCtnw.426;Weren't long ago we gave King Bran back to the sea. Today our mourning ends. Today, by the grace of the gods and the clans, a new ruler takes the crown. Let us swear him fealty.;;;;;;;;;;;;;x;
+EVTOPTAtnw.426;Long live the King!;;;;;;;;;;;;;x;
+
 EVTNAMEtnw.1000;Victory of the North;;;;;;;;;;;;;x;
 EVTDESCtnw.1000;Thanks to your tactical genius, Redania defeated the invader from the south. Now is the time to decide the fate of the North. Should we return to the old order before the war? Or should the North be united under your leadership? ;;;;;;;;;;;;;x;
 EVTOPTAtnw.1000;The North is finally free.;;;;;;;;;;;;;x;

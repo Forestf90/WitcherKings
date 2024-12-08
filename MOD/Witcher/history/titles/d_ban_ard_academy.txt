@@ -2,3 +2,6 @@
 	liege=k_kaedwen
 }
 1269.1.1={holder=155401}
+1275.1.1={
+	liege=e_nilfgaard
+}

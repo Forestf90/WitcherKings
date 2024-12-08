@@ -20,3 +20,15 @@ drug_addict = {
 	
 	ai_rationality = -20
 }
+
+hym_possessed = {
+	hidden_from_others = yes
+
+	stewardship = -2
+	diplomacy = -2
+	intrigue = -2
+	
+	combat_rating = -20
+	
+	ai_rationality = -20
+}

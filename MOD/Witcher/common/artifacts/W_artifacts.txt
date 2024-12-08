@@ -66,6 +66,17 @@ loathen = { # Vandergrift's sword
 	picture = "GFX_sword_T2"
 	slot = weapon
 }
+brokvar = { #Udarlyk family sword
+	combat_rating = 15
+	martial = 2
+	monthly_character_prestige = 0.01
+	
+	quality = 3
+	flags = { combat_weapon sword }
+	stacking = no
+	picture = "GFX_sword_T2"
+	slot = weapon
+}
 zefhar_bow = { # Bow
 	combat_rating = 15
 	martial = 2

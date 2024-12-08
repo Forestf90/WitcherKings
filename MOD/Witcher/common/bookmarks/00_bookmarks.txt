@@ -251,7 +251,7 @@ bm_witcher_3 = {
 
 	selectable_character = {
 		id = 9 # Radowid V 
-		age = 20
+		age = 19
 		name = ERA_CHAR_NAME_9
 		title = k_redania
 		title_name = k_redania
@@ -267,7 +267,7 @@ bm_witcher_3 = {
 	
 	selectable_character = {
 		id = 100006 # Emhyr var Emreis
-		age = 53
+		age = 54
 		name = ERA_CHAR_NAME_100006
 		title = e_nilfgaard
 		title_name = e_nilfgaard
@@ -278,6 +278,38 @@ bm_witcher_3 = {
 			culture = nilfgaardian
 			government = feudal_government
 			dynasty = 20000
+		}
+	}
+
+	selectable_character = {
+		id = 35200 # Crach
+		age = 48
+		name = ERA_CHAR_NAME_35200
+		title = d_ard_skellig
+		title_name = d_ard_skellig
+		character = { 
+			dna=begea0glea0
+			properties=wa0ehd
+			religion = freya
+			culture = skellige
+			government = feudal_government
+			dynasty = 7001
+		}
+	}
+
+	selectable_character = {
+		id = 30002 # Villem
+		age = 24
+		name = ERA_CHAR_NAME_30002
+		title = k_lyria_rivia_nilfgaard
+		title_name = k_lyria_rivia_nilfgaard
+		character = { 
+			dna=icjcpiodheg
+			properties=oi000c
+			religion = melitele
+			culture = lyrian
+			government = feudal_government
+			dynasty = 6000
 		}
 	}
 }

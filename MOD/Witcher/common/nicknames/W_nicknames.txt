@@ -21,6 +21,8 @@ nick_la_louve= { } # Bienvenu La Louve
 nick_the_uniter = { }
 nick_the_bloody_baron = { } # Phillip Strenger
 nick_iron_fang = {} # Grymmdjarr
+nick_black_hand = {} #Holger
+nick_blue_boy ={} #Lugos
 
 # GIVEN BY TRAITS
 

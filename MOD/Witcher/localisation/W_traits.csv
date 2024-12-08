@@ -43,6 +43,8 @@ wise_sage_desc;The Sage is a trove full of knowledge that few can match, efficie
 # HEALTH;;;;;;;;;;;;;;
 drug_addict;Drug Addict;;;;;;;;;;;;;x
 drug_addict_desc;This character is addicted to drugs.;;;;;;;;;;;;;x
+hym_possessed;Hym Possessed;;;;;;;;;;;;;x
+hym_possessed_desc;This character is possessed by demon Hym.;;;;;;;;;;;;;x
 # LIFESTYLE;;;;;;;;;;;;;;
 alchemist;Alchemist;;;;;;;;;;;;;x
 alchemist_desc;This character is a skilled alchemist pursuing the many mysteries of his trade.;;;;;;;;;;;;;x

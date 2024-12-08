@@ -125,7 +125,10 @@ long_character_event = {
 	option = {
 		name = EVTOPTAtnw.101
 		any_independent_ruler = {
-			limit = { has_landed_title = k_skellig}
+			limit = {
+				is_landed = yes
+				culture  = skellige
+				}
 			letter_event = { id = nilfgaard.102 tooltip = EVTTOOLTIPnilfgaard.102 days = 3 }
 		}
 		ai_chance = { factor = 3 }
@@ -547,7 +550,7 @@ character_event = {
 	}
 }
 
-//Ciri return
+# Ciri return
 long_character_event = {
 	id = tnw.305
 	desc = EVTDESCtnw.305

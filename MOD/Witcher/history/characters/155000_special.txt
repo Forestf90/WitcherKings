@@ -430,6 +430,25 @@
 	1201.1.1={ birth=yes effect={ dynasty=none } } 
 	1290.1.1={ death=yes } 
 } 
+155203={ 
+	name=Hjort #Udarlyk advaisor 
+	dynasty=0
+	dna=aihfhhccabl
+	properties=cd0cjk
+	religion=druidic culture=skellige
+	add_trait=semi_canon add_trait=druid add_trait=scholarly_theologian add_trait=human_race
+	1211.1.1={ birth=yes effect={ dynasty=none } } 
+	1281.1.1={ death=yes } 
+	1240.10.25= {
+		employer = 35425
+	}
+	1251.04.17 = {
+		employer = 35426
+	}
+	1274.1.1 = {
+		employer = 35427
+	}
+} 
 ## 155200 - 155300		Druids
 
 ## 155300 - 155400		Other

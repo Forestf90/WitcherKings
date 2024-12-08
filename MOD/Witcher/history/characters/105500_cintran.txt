@@ -239,14 +239,15 @@
 	1248.9.20={ death=yes } 
 } 
 105526={ 
-	name=Gynne
+	name=Birma
 	female=yes
+	add_trait=semi_canon
 	dynasty=9001
 	father=105523
 	culture=cintran religion=melitele
 	mother=9320
-	1211.5.9={ birth=yes } 
-	1252.9.28={ death=yes } 
+	1230.5.9={ birth=yes } 
+	1275.4.7={ death=yes } 
 } 
 105527={ 
 	name=Coram
